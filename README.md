@@ -12,7 +12,7 @@ CADLD computes temperature-dependent, anharmonic phonon spectral functions $A(\m
 
 - **Trajectory-to-lattice mapping** with the Hungarian algorithm (`scipy.optimize.linear_sum_assignment`). It works under periodic boundary conditions, checks sublattice compatibility (cation ↔ cation, anion ↔ anion), and uses a distance cutoff.
 - **Natural vacancy handling.** An unassigned (vacant) site contributes zero displacement and zero force, so vacancy disorder is encoded directly in the correlation functions.
-- **Normal-mode projection** onto TDEP second-order force constants (`outfile.forceconstant`), using mass-weighted eigenvectors $$\vec{e}_{s,\kappa}(\mathbf{q})$$ .
+- **Normal-mode projection** onto TDEP second-order force constants (`outfile.forceconstant`), using mass-weighted eigenvectors $\vec{e}\_{s,\kappa}(\mathbf{q})$.
 - **Anharmonic force extraction:** $\mathcal{F}^{\text{anh}}_s(\mathbf{q},t) = \mathcal{F}_s(\mathbf{q},t) + \omega_s^2(\mathbf{q})\,\mathcal{U}_s(\mathbf{q},t)$, i.e. the effective harmonic restoring force is subtracted.
 - **Phonon self-energy** $\Sigma_s(\mathbf{q},\omega)$ from the Fourier-transformed force autocorrelation, with Gaussian damping.
 - **Dyson-equation spectral function** $A(\mathbf{q},\omega)$ along any high-symmetry path.
@@ -155,7 +155,8 @@ If you use CADLD, please cite:
 ```bibtex
 @article{CADLD1,
   title   = {Dynamic Disorder Driven Glassy Thermal Conductivity in Complex Crystalline Frank-Kasper Ag12Te6S},
-  author  = {<Authors>},
+  author  = {Suryakanta Mishra, Animesh Bhui, Arijit Sinha, Prasad V. D. Matukumilli, Braulio Reyes
+Suarez, Indrajit Haldar, Subarna Das, Diptikanta Swain, G.N. Manjunatha Reddy, Umesh V. Waghmare and Kanishka Biswas},
   journal = {<Journal>},
   year    = {2026}
 }
