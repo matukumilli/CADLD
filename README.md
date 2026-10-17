@@ -161,7 +161,7 @@ Suarez, Indrajit Haldar, Subarna Das, Diptikanta Swain, G.N. Manjunatha Reddy, U
   year    = {2026}
 }
 @article{CADLD,
-  title   = {Configuration-Averaged Dynamical Lattice Dynamics for Superionic Conductors},
+  title   = {Configuration-Averaged Dyson Lattice Dynamics for Superionic Conductors},
   author  = {<Authors>},
   journal = {<Journal>},
   year    = {2026}
