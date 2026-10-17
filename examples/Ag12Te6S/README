@@ -1,7 +1,10 @@
-Due to file-size limitations, only a small vasprun.xml file is provided in this repository. The complete vasprun.xml file can be downloaded from Google Drive:https://drive.google.com/file/d/1HB_sFQa0Rg9MY8udqd49R_Vy8LXgYczb/view?usp=drive_link
-
+Due to file-size limitations, only a small vasprun.xml file is provided in this repository. 
 
 python3.8 phonon_self_energy.py --qpath "0,0,0 0.5,0,0 0.333,0.333,0 0,0,0 0,0,0.5" --labels "Gamma M K Gamma A" --npoints 50 --scale-self-energy 1.0 --out-dir output_T300K_test --temp 300 --broadening 0.0 --min-broadening 1.0 --wgrid-points 2000
 
 cd output_T300K_test
 use the plotting scripts
+
+
+The complete vasprun.xml file can be downloaded from Google Drive:https://drive.google.com/file/d/1HB_sFQa0Rg9MY8udqd49R_Vy8LXgYczb/view?usp=drive_link
+
