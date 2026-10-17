@@ -12,7 +12,7 @@ CADLD computes temperature-dependent, anharmonic phonon spectral functions $A(\m
 
 - **Trajectory-to-lattice mapping** with the Hungarian algorithm (`scipy.optimize.linear_sum_assignment`). It works under periodic boundary conditions, checks sublattice compatibility (cation ↔ cation, anion ↔ anion), and uses a distance cutoff.
 - **Natural vacancy handling.** An unassigned (vacant) site contributes zero displacement and zero force, so vacancy disorder is encoded directly in the correlation functions.
-- **Normal-mode projection** onto TDEP second-order force constants (`outfile.forceconstant`), using mass-weighted eigenvectors $\vec{e}_{s,\kappa}(\mathbf{q})$ .
+- **Normal-mode projection** onto TDEP second-order force constants (`outfile.forceconstant`), using mass-weighted eigenvectors $$\vec{e}_{s,\kappa}(\mathbf{q})$$ .
 - **Anharmonic force extraction:** $\mathcal{F}^{\text{anh}}_s(\mathbf{q},t) = \mathcal{F}_s(\mathbf{q},t) + \omega_s^2(\mathbf{q})\,\mathcal{U}_s(\mathbf{q},t)$, i.e. the effective harmonic restoring force is subtracted.
 - **Phonon self-energy** $\Sigma_s(\mathbf{q},\omega)$ from the Fourier-transformed force autocorrelation, with Gaussian damping.
 - **Dyson-equation spectral function** $A(\mathbf{q},\omega)$ along any high-symmetry path.
@@ -27,7 +27,7 @@ CADLD computes temperature-dependent, anharmonic phonon spectral functions $A(\m
 1. **Reference lattice** $\mathbf{R}_0$: an ordered, symmetry-preserving cell (for example $P\bar{6}$) whose harmonic eigenvectors define an orthonormal projection basis.
 2. **Mapping:** at each timestep, MD atoms are assigned to reference sites, giving displacements $\mathbf{u}\_{\kappa}(t)$ and forces $\mathbf{f}\_{\kappa}(t)$
 3. **Projection:**
-   $\mathcal{U}\_s(\mathbf{q},t)=\sum_\kappa \sqrt{m_\kappa}\,\vec{e}^{\,*}\_{s,\kappa}(\mathbf{q})\cdot\mathbf{u}\_\kappa(\mathbf{q},t)$, and likewise for $\mathcal{F}\_s$ using $1/\sqrt{m_\kappa}$
+   $\mathcal{U}\_s(\mathbf{q},t)=\sum_\kappa \sqrt{m_\kappa}\,\vec{e}^{\,*}\_{s,\kappa}(\mathbf{q})\cdot\mathbf{u}\_\kappa(\mathbf{q},t) $, and likewise for $\mathcal{F}\_s$ using $1/\sqrt{m_\kappa}$
 4. **Self-energy:** $\Sigma\_s(\mathbf{q},\omega) \propto \frac{1}{k_BT}\int dt\, e^{i\omega t}\,\langle \mathcal{F}^{\text{anh}}_s(\mathbf{q},t)\,\mathcal{F}^{\text{anh}*}_s(\mathbf{q},0)\rangle$
 5. **Dyson equation:**
    $A_s(\mathbf{q},\omega) = -\frac{1}{\pi}\,\mathrm{Im}\,\dfrac{2\omega_s}{\omega^2-\omega_s^2-2\omega_s\Sigma_s(\mathbf{q},\omega)}$
