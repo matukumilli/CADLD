@@ -1,4 +1,4 @@
-# CADLD — Configuration-Averaged Dynamical Lattice Dynamics
+# CADLD — Configuration-Averaged Dyson Lattice Dynamics
 
 **Phonon spectral functions of superionic and partially disordered crystals from MD trajectories**
 
