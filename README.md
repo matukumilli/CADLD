@@ -171,11 +171,11 @@ Suarez, Indrajit Haldar, Subarna Das, Diptikanta Swain, G.N. Manjunatha Reddy, U
 Please also cite **TDEP** (Hellman *et al.*, PRB 84, 180301 (2011); PRB 87, 104111 (2013)) for the force constants.
 
 ---
-
+<!--
 ## 📜 License
 
 MIT License. See [LICENSE](LICENSE).
-
+-->
 ## 🤝 Contributing
 
 Issues and pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
