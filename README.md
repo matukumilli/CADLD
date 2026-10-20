@@ -11,7 +11,7 @@ CADLD computes temperature-dependent, anharmonic phonon spectral functions $A(\m
 ## ✨ Features
 
 - **Trajectory-to-lattice mapping** with the Hungarian algorithm (`scipy.optimize.linear_sum_assignment`). It works under periodic boundary conditions, checks sublattice compatibility (cation ↔ cation, anion ↔ anion), and uses a distance cutoff.
-- **Natural vacancy handling.** An unassigned (vacant) site contributes zero displacement and zero force, so vacancy disorder is encoded directly in the correlation functions.
+- **Efficient vacancy handling.** An unassigned (vacant) site contributes zero displacement and zero force, so vacancy disorder is encoded directly in the correlation functions.
 - **Normal-mode projection** onto TDEP second-order force constants (`outfile.forceconstant`), using mass-weighted eigenvectors $e\_{s,\kappa}(\mathbf{q})$.
 - **Anharmonic force extraction:** $\mathcal{F}^{\text{anh}}_s(\mathbf{q},t) = \mathcal{F}_s(\mathbf{q},t) + \omega_s^2(\mathbf{q}) \mathcal{U}_s(\mathbf{q},t)$, i.e. the effective harmonic restoring force is subtracted.
 - **Phonon self-energy** $\Sigma_s(\mathbf{q},\omega)$ from the Fourier-transformed force autocorrelation, with Gaussian damping.
@@ -134,7 +134,7 @@ CADLD/
 ├── force_correlation.py    # Projected force–force correlation analysis
 ├── mapping_strategy.py     # Hungarian / PBC mapping utilities
 ├── plot_results.py         # Plotting of dispersions, A(q,ω), MSD
-├── examples/               # Example inputs (e.g. Ag–Te–S argyrodite-like system)
+├── examples/               # Example inputs (e.g. Ag12Te6S Frank-kasper system)
 └── docs/                   # Figures and methodology notes
 ```
 
